@@ -26,14 +26,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-/* ---------- МОДЕЛЬ ДАННЫХ ---------- */
 data class RadioStation(
     val name: String,
     val frequency: String,
     val description: String
 )
 
-/* ---------- ДАННЫЕ СПРАВОЧНИКА ---------- */
 val radioStations = listOf(
     RadioStation("Europa Plus", "106.2 FM", "Популярная зарубежная музыка"),
     RadioStation("Retro FM", "104.0 FM", "Хиты 80-х, 90-х и 2000-х"),
@@ -57,7 +55,6 @@ val radioStations = listOf(
     RadioStation("Lounge FM", "97.2 FM", "Лаунж и спокойная музыка")
 )
 
-/* ---------- ГЛАВНЫЙ ЭКРАН С ПОИСКОМ ---------- */
 @Composable
 fun RadioBookApp() {
     var searchText by rememberSaveable { mutableStateOf("") }
@@ -101,7 +98,6 @@ fun RadioBookApp() {
     }
 }
 
-/* ---------- ЭЛЕМЕНТ СПИСКА ---------- */
 @Composable
 fun RadioItem(station: RadioStation) {
     Card(
